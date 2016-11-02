@@ -13,7 +13,7 @@ io.on('connection',function(socket){
 		socket.broadcast.emit('message',message);
 	});
 	socket.emit('message',{
-		text: 'Connected Established for chatting',
+		text: 'Welcome to ChatApp',
 	});
 });
 
