@@ -12,7 +12,7 @@ body
 	overflow:auto;
 }
 
-#messagesList h4
+#messagesList h5
 {
 	display:list-item;
 	position: relative;
@@ -24,19 +24,20 @@ body
 	z-index:1;
 	color:#fff;
 }
-#messagesList h4::after
+#messagesList h5::after
 {
 	content: "";
 	position: absolute;
 	display: block;
-	border: 1.8em solid transparent;
+	border: 1.6em solid transparent;
 	border-top-color: #3f51b5;
+	/*border-left-color: black;*/
 	top:0;
-	left:0;
+	right:-1em;
 	z-index:-1;
 }
 
-#messagesList > h4 > small
+#messagesList > h5 > small
 {
 	float: right;
 	color:#bdbdbd;

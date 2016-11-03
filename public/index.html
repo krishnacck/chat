@@ -5,46 +5,47 @@
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/bootstrap-material-design.min.css">
   <link rel="stylesheet" type="text/css" href="./css/ripples.min.css">
-  <link rel="stylesheet" href="./css/style.css">      
+  <link rel="stylesheet" href="./css/index-style.css">    
 </head>
 <body>
-
-<div class="container">
-	<div class="row"><h1>Welcome !</h1></div>
-	<div class="row well messagesList-style">
-		<div id="messagesList"></div>
+<div class="container my-container">
+<div class="row well">
+	<form action="chat.html" id="nickname-form">
+	<div class="form-group label-floating is-empty">
+	<div class="row">
+		<div class="col-md-12">
+			<label class="control-label" for="nickname">Enter a Nickname and Begin Chat</label>
+			<input type="text" name="nickname" class="form-control" id="nickname">
+		</div>
 	</div>
-
-<nav class=" footer navbar-fixed-bottom">
-	<form id="messageForm" class="form-horizontal">
-	<div class="container">
-		<div class="form-group label-floating is-empty" id="msgFormComponents">
-			<div class="col-md-10 col-sm-10 col-lg-10" id="msg">
-    			<label for="msg" class="control-label">Enter a Message</label>
-    			<input class="form-control" type="text" name="message">
-   			</div>
-   			<div class="col-md-2 col-sm-2 col-lg-2">
-				<button class="btn btn-primary btn-raised" id="submit-button" type="submit">Send</button>
-  			</div>
-  		</div>
-  	</div>
-  	</form>
- </nav>
-
-
-
+	<div class="row">
+		<div class="col-md-12">
+			<button type="submit" class="btn btn-primary btn-raised">Set Nickname</button>
+		</div>
+	</div>
+	</div>
+	</form>
 </div>
+</div>
+
 	<script src="./js/jquery.js"></script>
-	
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/material.min.js"></script>
 	<script src="./js/ripples.min.js"></script>
 	<script type="text/javascript">
 		$.material.init();
 	</script>
-	<script src="./js/socket.io-1.4.5.js"></script>
-	<script src="./js/moment.js"></script>
-	<script src="./js/app.js"></script>
-
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			$('#nickname-form').on('submit',function(){
+				if($('#nickname').val() == ""){
+					alert("Set a Nickname");
+					return false;
+				}
+			});
+		});
+		
+	</script>
 </body>
 </html>
