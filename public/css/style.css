@@ -1,0 +1,59 @@
+body
+{
+	height:50em;
+}
+.messagesList-style
+{
+	margin: 0 auto;
+}
+#messagesList
+{
+	height:40em;
+	overflow:auto;
+}
+
+#messagesList h4
+{
+	display:list-item;
+	position: relative;
+	width:50%;
+	padding:1em;
+	border-radius: 25px;
+	word-wrap: break-word;
+	background-color: #3f51b5;
+	z-index:1;
+	color:#fff;
+}
+#messagesList h4::after
+{
+	content: "";
+	position: absolute;
+	display: block;
+	border: 1.8em solid transparent;
+	border-top-color: #3f51b5;
+	top:0;
+	left:0;
+	z-index:-1;
+}
+
+#messagesList > h4 > small
+{
+	float: right;
+	color:#bdbdbd;
+}
+
+#submit-button
+{
+	background-color: #e91e63;
+}
+#msg input[type="text"]
+{
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#e91e63),to(#e91e63)),
+					-webkit-gradient(linear,left top,left bottom,from(#D2D2D2),to(#D2D2D2));
+	background-image: linear-gradient( to left top, #e91e63, #e91e63);
+	
+}
+#msgFormComponents.is-focused label
+{
+	color:#e91e63;
+}

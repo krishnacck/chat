@@ -8,7 +8,8 @@ socket.on('connect',function(){
 });
 
 socket.on('message',function(message){
-	messagesList.append('<p>'+message.text+'</p>');
+	var timestamp = moment.utc(message.timestamp);
+	messagesList.append('<h4><small>'+timestamp.local().format('h:mm a')+'</small> '+message.text+'</h4>');
 });
 
 form.on('submit',function (event) {
@@ -17,6 +18,5 @@ form.on('submit',function (event) {
 	socket.emit('message',{
 		text : message.val(),
 	});
-	messagesList.append('<p>'+message.val()+'</p>')
 	message.val('');
 });
