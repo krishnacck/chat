@@ -1,11 +1,11 @@
-.my-container
+#form-container
 {
+	height: 13em;
+	width: 30em;
 	position: fixed;
 	top:0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	height: 20em;
-	width: 35em;
 	margin: auto;
 }

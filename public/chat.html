@@ -2,40 +2,42 @@
 <html>
 <head>
 	<title>Chat App</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/bootstrap-material-design.min.css">
-  <link rel="stylesheet" type="text/css" href="./css/ripples.min.css">
-  <link rel="stylesheet" href="./css/chat-style.css">      
+  	<link rel="stylesheet" href="./css/bootstrap-material-design.min.css">
+  	<link rel="stylesheet" type="text/css" href="./css/ripples.min.css">
+  	<link rel="stylesheet" href="./css/chat-style.css">
+  	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 
 <div class="container">
-	<div class="row"><h1>Welcome !</h1></div>
-	<div class="row well messagesList-style">
-		<div id="messagesList"></div>
-	</div>
+		<div class="row well" id="messages-container">
+			<ul id="messagesList"></ul>
+		</div>
 
-<nav class=" footer navbar-fixed-bottom">
-	<form id="messageForm" class="form-horizontal">
-	<div class="container">
-		<div class="form-group label-floating is-empty" id="msgFormComponents">
-			<div class="col-md-10 col-sm-10 col-lg-10" id="msg">
-    			<label for="msg" class="control-label">Enter a Message</label>
-    			<input class="form-control" type="text" name="message">
-   			</div>
-   			<div class="col-md-2 col-sm-2 col-lg-2">
-				<button class="btn btn-primary btn-raised" id="submit-button" type="submit">Send</button>
-  			</div>
-  		</div>
+	<div class="row well" id="messageForm-container">
+		<form id="messageForm">
+				<div class="form-group label-floating is-empty">
+    					<label for="msg" class="control-label">Enter a Message</label>
+    					<input class="form-control" type="text" name="message">
+    			</div>
+    			<div class="text-center">
+						<button class="btn btn-primary btn-raised" id="submit-button" type="submit">Send</button>
+  				</div>
+  		</form>
   	</div>
-  	</form>
- </nav>
-
-
-
 </div>
+
+
 	<script src="./js/jquery.js"></script>
-	
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/material.min.js"></script>
 	<script src="./js/ripples.min.js"></script>

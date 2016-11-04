@@ -10,8 +10,12 @@ socket.on('connect',function(){
 
 socket.on('message',function(message){
 	var timestamp = moment.utc(message.timestamp);
-	messagesList.append('<h5><small>'+timestamp.local().format('h:mm a')+'</small> <b>'+message.name+'</b> :- '+message.text+'</h5>');
-});
+	messagesList.append('<li><b class="badge">'+message.name+'</b> '+message.text+'<small>'+timestamp.local().format('h:mm a')+'</small></li>');	
+	
+	/* scroll to top automatically*/
+	var msgDiv = document.getElementById('messages-container');
+	msgDiv.scrollTop = msgDiv.scrollHeight;
+	});
 
 form.on('submit',function (event) {
 	event.preventDefault();
@@ -22,7 +26,3 @@ form.on('submit',function (event) {
 	});
 	message.val('');
 });
-
-window.onbeforeunload = function(){
-	alert('you cannot refresh');
-}
