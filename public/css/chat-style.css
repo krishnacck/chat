@@ -1,11 +1,15 @@
+body,html,#main-container
+{
+	height: 98%;
+}
 #messages-container
 {
-	position: fixed;
+	position: relative;
 	top:0;
 	left: 0;
 	right: 0;
 	margin: auto;
-	height:45em;
+	height:85%;
 	overflow: auto;
 	width:90%;
 	background-color: rgba(0,128,128,0.5);
@@ -14,12 +18,12 @@
 
 #messageForm-container
 {
-	height:13em;
+	height:auto;
 	width:90%;
-	position: fixed;
-	right: 0;
+	position: relative;
+	/*right: 0;
 	left: 0;
-	bottom: 0;
+	bottom: 0;*/
 	margin: auto;
 }
 
