@@ -1,6 +1,6 @@
 body,html,#main-container
 {
-	height: 98%;
+	height: 70%;
 }
 #messages-container
 {
@@ -18,8 +18,8 @@ body,html,#main-container
 
 #messageForm-container
 {
-	height:auto;
-	width:90%;
+	height:60%;
+	width:50%;
 	position: relative;
 	/*right: 0;
 	left: 0;
