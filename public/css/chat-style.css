@@ -9,9 +9,9 @@ body,html,#main-container
 	left: 0;
 	right: 0;
 	margin: auto;
-	height:85%;
+	height:50%;
 	overflow: auto;
-	width:90%;
+	width:40%;
 	background-color: rgba(0,128,128,0.5);
 	padding-bottom: 0.5em;
 }
