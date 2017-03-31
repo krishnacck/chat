@@ -3,17 +3,16 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var moment = require('moment');
 
+moment().format('h:mm a');
 app.use(express.static(__dirname+'/public'));
 
-io.on('connection',function(socket){
-	console.log('connection established on socket.io');
-	
+io.on('connection',function(socket)
+{	
 	socket.on('message',function(message){
-		socket.broadcast.emit('message',message);
-	});
-	socket.emit('message',{
-		text: 'Connected Established for chatting',
+		message.timestamp = moment().valueOf();
+		io.emit('message',message);
 	});
 });
 

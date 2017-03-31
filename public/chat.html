@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat Box</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  	<link rel="stylesheet" href="./css/bootstrap-material-design.min.css">
+  	<link rel="stylesheet" type="text/css" href="./css/ripples.min.css">
+  	<link rel="stylesheet" href="./css/chat-style.css">
+  	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div id="main-container">
+		<div class="row well" id="messages-container">
+			<ul id="messagesList"></ul>
+		</div>
+
+	<div class="row well" id="messageForm-container">
+		<form id="messageForm">
+				<div class="form-group label-floating is-empty">
+    					<label for="msg" class="control-label">Enter a Message</label>
+    					<input class="form-control" type="text" name="message">
+    			</div>
+    			<div class="text-center">
+						<button class="btn btn-primary btn-raised" id="submit-button" type="submit">Send</button>
+  				</div>
+  		</form>
+  	</div>
+</div>
+
+
+	<script src="./js/jquery.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/material.min.js"></script>
+	<script src="./js/ripples.min.js"></script>
+	<script type="text/javascript">
+		$.material.init();
+	</script>
+	<script src="./js/socket.io-1.4.5.js"></script>
+	<script src="./js/moment.js"></script>
+	<script src="./js/getQueryVariable.js"></script>
+	<script src="./js/app.js"></script>
+
+</body>
+</html>

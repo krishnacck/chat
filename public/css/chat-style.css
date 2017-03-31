@@ -1,0 +1,71 @@
+body,html,#main-container
+{
+	height: 98%;
+}
+#messages-container
+{
+	position: relative;
+	top:0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height:85%;
+	overflow: auto;
+	width:90%;
+	background-color: rgba(0,128,128,0.5);
+	padding-bottom: 0.5em;
+}
+
+#messageForm-container
+{
+	height:auto;
+	width:90%;
+	position: relative;
+	/*right: 0;
+	left: 0;
+	bottom: 0;*/
+	margin: auto;
+}
+
+#messagesList
+{
+	list-style:none;
+}
+
+#messagesList > li
+{
+	position: relative;
+	width: 50%;
+	color:white;
+	padding:0.8em;
+	background-color: rgba(0,0,0,1);
+	border-radius: 10px;
+	border-top-right-radius: 0px;
+	/*border-bottom-right-radius: 0px;*/
+	margin-top: 2px;
+	z-index:1;
+}
+#messagesList > li::after
+{
+	content:"";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: -10px;
+	border:1em solid transparent;
+	border-top-color: rgba(0,0,0,1);
+	z-index:-1;
+}
+#messagesList > li > small
+{
+	position: absolute;
+	right: 20px;
+}
+
+#messagesList > li > b.badge
+{
+	background-color:rgba(255,255,255,0.9);
+	border-radius: 10px;
+	padding: 0.5em;
+	color:black;
+}
